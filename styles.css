@@ -1,0 +1,29 @@
+body {
+    width: 400px;
+}
+#workouts .workout-container {
+    box-sizing: border-box;
+}
+
+#workouts .workout-plot {
+    overflow: hidden;
+
+    float: left;
+    width: 370px;
+}
+
+#workouts .workout-plot .bar {
+    display: inline-block;
+    vertical-align: bottom;
+    min-width: 1px;
+}
+#workouts .content {
+    overflow: hidden;
+}
+
+#workouts .content button {
+    padding: 2px;
+    width: 23px;
+    height: 23px;
+    margin-left: 5px;
+}

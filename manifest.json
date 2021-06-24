@@ -1,0 +1,20 @@
+{
+    "name": "Whatsonzwift workouts to Garmin Connect",
+    "description": "Exports workouts from whatsonzwift.com to Garmin Connect",
+    "version": "1.0",
+    "manifest_version": 3,
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [{
+        "matches": ["*://*.whatsonzwift.com/*"],
+        "js": ["woz_content.js"]
+    }, {
+        "matches": ["*://*.connect.garmin.com/*"],
+        "js": ["gc_connect.js"]
+    }],
+    "permissions": ["storage", "activeTab", "scripting", "tabs"],
+    "action": {
+        "default_popup": "popup.html"
+    }
+}
