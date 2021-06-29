@@ -8,7 +8,10 @@ class WorkoutsFetcher {
             var workoutName = '';
             let buttons = breadcrumbs.getElementsByClassName('button');
             for (let button of buttons) {
-                workoutName += button.textContent.trim() + ' - ';
+                let text = button.textContent.trim();
+                if (text.toLowerCase() != 'workouts') {
+                    workoutName += text + ' - ';
+                }
             }
             workoutName = workoutName.replace(/\s-\s$/, '') + ': '+breadcrumbs.getElementsByTagName('h4')[0].textContent.trim();
     
